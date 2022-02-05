@@ -18,8 +18,6 @@
       </div>
       <div id="unity-footer">
         
-        
-        
       </div>
     </div>
     <script>
@@ -45,8 +43,8 @@
         container.className = "unity-mobile";
         config.devicePixelRatio = 1;
       } else {
-        canvas.style.width = "1728px";
-        canvas.style.height = "972px";
+        canvas.style.width = "960px";
+        canvas.style.height = "600px";
       }
       loadingBar.style.display = "block";
 
@@ -57,10 +55,9 @@
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
           loadingBar.style.display = "none";
-         fullscreenButton.onclick = () => {
+          fullscreenButton.onclick = () => {
             unityInstance.SetFullscreen(1);
           };
-          
         }).catch((message) => {
           alert(message);
         });
